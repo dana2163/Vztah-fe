@@ -1,0 +1,17 @@
+<h2>Osoby</h2>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Meno</th>
+    <th>Typ</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let osoba of osoby">
+    <td>{{osoba.id}}</td>
+    <td>{{osoba.meno}}</td>
+    <td>{{osoba.typ}}</td>
+  </tr>
+  </tbody>
+</table>

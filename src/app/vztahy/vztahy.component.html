@@ -1,0 +1,44 @@
+<h2>Vzťahy</h2>
+<form (ngSubmit)="pridajVztah()" #vztahForm="ngForm">
+  <label>
+    Osoba 1:
+    <select name="osoba1" [(ngModel)]="novaOsoba1" required>
+      <option *ngFor="let osoba of osoby" [value]="osoba.meno">{{osoba.meno}}</option>
+    </select>
+  </label>
+  <label>
+    Osoba 2:
+    <select name="osoba2" [(ngModel)]="novaOsoba2" required>
+      <option *ngFor="let osoba of osoby" [value]="osoba.meno">{{osoba.meno}}</option>
+    </select>
+  </label>
+  <label>
+    Typ vzťahu:
+    <select name="typ" [(ngModel)]="novyTyp" required>
+      <option value="súrodenecký">Súrodenecký</option>
+      <option value="rodič-žiak">Rodič-žiak</option>
+      <option value="učiteľ-žiak">Učiteľ-žiak</option>
+    </select>
+  </label>
+  <button type="submit" [disabled]="vztahForm.invalid">Pridať vzťah</button>
+</form>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Osoba 1</th>
+    <th>Osoba 2</th>
+    <th>Typ</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let vztah of vztahy">
+    <td>{{vztah.id}}</td>
+    <td>{{getOsobaById(vztah.osoba1Id)?.meno}}</td>
+    <td>{{getOsobaById(vztah.osoba2Id)?.meno}}</td>
+    <td>{{vztah.typ}}</td>
+    <td><button (click)="zmazVztah(vztah)">Zmazať</button></td>
+  </tr>
+  </tbody>
+</table>
