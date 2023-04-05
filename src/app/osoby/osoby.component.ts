@@ -8,9 +8,9 @@ import {OsobyService} from "../common/service/osoby.service";
 
 })
 export class OsobyComponent implements OnInit {
-  osoby: Osoba[]; // pole objektov typu Osoba
-  meno: string; // meno novej osoby
-  typ: string; // typ novej osoby
+  osoby!: Osoba[]; // pole objektov typu Osoba
+  meno!: string; // meno novej osoby
+  typ!: string; // typ novej osoby
 
   constructor(private osobyService: OsobyService) {}
 

@@ -6,7 +6,9 @@ import {Osoba} from "../model/osoby.model";
 })
 export class OsobyService {
   osoby: Osoba[] = []
-  constructor() {}
+
+  constructor() {
+  }
 
   getOsoby(): Osoba[] {
     return this.osoby;
@@ -19,3 +21,5 @@ export class OsobyService {
   getOsobyByTyp(typ: string): Osoba[] {
     return this.osoby.filter(o => o.typ === typ);
 
+  }
+}

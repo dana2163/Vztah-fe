@@ -6,11 +6,7 @@ import {Vztah} from "../model/vztahy.model";
   providedIn: 'root'
 })
 export class VztahyService {
-  vztahy: Vztah[] = [
-    { id: 1, osoba1Id: 1, osoba2Id: 2, typ: 'súrodenecký' },
-    { id: 2, osoba1Id: 5, osoba2Id: 1, typ: 'rodič-žiak' },
-    { id: 3, osoba1Id: 3, osoba2Id: 1, typ: 'učiteľ-žiak' },
-  ];
+  vztahy: Vztah[] = [];
 
   constructor(private osobyService: OsobyService) {}
 

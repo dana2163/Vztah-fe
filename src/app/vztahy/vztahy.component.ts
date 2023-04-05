@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Vztah } from '../common/models/vztah.model';
-import { Osoba } from '../common/models/osoba.model';
+import { Vztah } from '../common/model/vztahy.model';
+import { Osoba } from '../common/model/osoby.model';
 import { VztahyService } from '../common/service/vztahy.service';
 
 interface OsobaInfo {
@@ -15,8 +15,8 @@ interface OsobaInfo {
   styleUrls: ['./vztahy.component.css']
 })
 export class VztahyComponent implements OnInit {
-  vztahy: Vztah[];
-  osoby: OsobaInfo[];
+  vztahy?: Vztah[];
+  osoby?: OsobaInfo[];
 
   constructor(private vztahyService: VztahyService) {}
 
