@@ -1,18 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {OsobyComponent} from "./osoby/osoby.component";
-import {VztahyComponent} from "./vztahy/vztahy.component";
-import {MailingListyComponent} from "./mailing-listy/mailing-listy.component";
 
+import { HomeComponent } from './home/home.component';
+//import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
-  { path: '', component: OsobyComponent },
-  { path: 'vztahy', component: VztahyComponent },
-  { path: 'mailing-listy', component: MailingListyComponent },
+  // Príklad trasy pre domovskú stránku
+  {
+    path: '',
+    component: HomeComponent
+  },
+  // Príklad trasy pre stránku "O aplikácii"
+  //{
+    //path: 'about',
+    //component: AboutComponent
+  //},
+  // Pridajte ďalšie trasy podľa vašich potrieb
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
