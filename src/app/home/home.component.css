@@ -1,0 +1,26 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.home-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.home-text {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.home-link {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
