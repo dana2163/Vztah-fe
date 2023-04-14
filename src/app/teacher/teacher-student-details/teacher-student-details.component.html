@@ -1,0 +1,8 @@
+<div class="teacher-student-details">
+  <h4>Students in Class ID: {{ classId }}</h4>
+  <ul>
+    <li *ngFor="let student of students">
+      {{ student.firstName }} {{ student.lastName }} - {{ student.email }}
+    </li>
+  </ul>
+</div>

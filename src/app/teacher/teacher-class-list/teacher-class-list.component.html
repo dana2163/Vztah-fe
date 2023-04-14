@@ -1,0 +1,7 @@
+<div class="teacher-class-list">
+  <h2>Class List</h2>
+  <div *ngFor="let classItem of classes">
+    <h3>{{ classItem.name }}</h3>
+    <app-teacher-student-details [classId]="classItem.id"></app-teacher-student-details>
+  </div>
+</div>
