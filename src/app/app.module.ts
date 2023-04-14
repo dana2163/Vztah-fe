@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { PerentsDashboardComponent } from './perents/perents-dashboard/perents-dashboard.component';
+import { StudentDashboardComponent } from './student/student-dashboard/student-dashboard.component';
+import { PerentsChildrenClassesComponent } from './perents/perents-children-classes/perents-children-classes.component';
 
 
 @NgModule({
@@ -13,6 +16,9 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     LoginComponent,
+    PerentsDashboardComponent,
+    StudentDashboardComponent,
+    PerentsChildrenClassesComponent,
 
   ],
   imports: [
