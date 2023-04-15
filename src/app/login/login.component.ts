@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import {LoginData} from "../model/login.model";
+import { LoginData } from "../model/login.model";
 
 @Component({
   selector: 'app-login',
@@ -10,17 +10,28 @@ import {LoginData} from "../model/login.model";
 export class LoginComponent {
   loginData: LoginData = {
     email: '',
-    password: ''
+    password: '',
+    role: '',
   };
 
   constructor(private router: Router) {}
 
+  onRoleChange(event: any) {
+    console.log(event.target.value); // выводит выбранное значение роли в консоль
+  }
+
   onLogin() {
     // Add your logic here to communicate with the backend for authentication.
-    // Based on the user role (teacher, student, or parent), you can navigate to the corresponding dashboard.
     // Example:
     // if (loggedIn && userRole === 'teacher') {
     //   this.router.navigate(['/teacher']);
     // }
+
+    // Проверяем роль пользователя и перенаправляем его на соответствующую страницу
+    if (this.loginData.role === 'teacher') {
+      this.router.navigate(['/teacher']);
+    } else if (this.loginData.role === 'parent') {
+      this.router.navigate(['/parent']);
+    }
   }
 }

@@ -9,6 +9,16 @@
       <label for="password">Password:</label>
       <input type="password" id="password" [(ngModel)]="loginData.password" name="password" required />
     </div>
+    <div>
+      <select id="role" [(ngModel)]="loginData.role" name="role" required (ngModelChange)="onRoleChange($event)">
+        <option value="" disabled selected>Select Role</option>
+        <option value="teacher">Teacher</option>
+        <option value="parent">Parent</option>
+      </select>
+
+
+    </div>
     <button type="submit">Login</button>
   </form>
 </div>
+

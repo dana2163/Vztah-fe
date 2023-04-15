@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import {PerentsDashboardComponent} from "./perents/perents-dashboard/perents-dashboard.component";
 import {TeacherDashboardComponent} from "./teacher/teacher-dashboard/teacher-dashboard.component";
 import {StudentDashboardComponent} from "./student/student-dashboard/student-dashboard.component";
+import {LoginComponent} from "./login/login.component";
 const routes: Routes = [
+  { path: '', component: LoginComponent},
   {path: 'parents', component: PerentsDashboardComponent},
   {path: 'teachers', component: TeacherDashboardComponent},
   {path: 'students', component: StudentDashboardComponent}

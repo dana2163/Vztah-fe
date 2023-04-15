@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { LoginComponent } from './login/login.component';
+//import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { PerentsDashboardComponent } from './perents/perents-dashboard/perents-dashboard.component';
 import { StudentDashboardComponent } from './student/student-dashboard/student-dashboard.component';
@@ -15,7 +15,7 @@ import { PerentsChildrenClassesComponent } from './perents/perents-children-clas
   declarations:[
     AppComponent,
     NavbarComponent,
-    LoginComponent,
+    //LoginComponent,
     PerentsDashboardComponent,
     StudentDashboardComponent,
     PerentsChildrenClassesComponent,
