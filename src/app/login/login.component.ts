@@ -13,6 +13,8 @@ export class LoginComponent {
     password: '',
     role: '',
   };
+  password: string = '';
+  email: string = '';
 
   constructor(private router: Router) {}
 
