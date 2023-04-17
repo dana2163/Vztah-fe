@@ -1,0 +1,9 @@
+<div class="class-view">
+  <h3 *ngIf="classInfo">Class: {{ classInfo.name }}</h3>
+  <h4>Students</h4>
+  <div class="student-list">
+    <div class="student-item" *ngFor="let student of students">
+      <span>{{ student.name }} - Parent Email: {{ student.parentEmail }}</span>
+    </div>
+  </div>
+</div>

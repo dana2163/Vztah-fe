@@ -1,7 +1,8 @@
 <div class="teacher-class-list">
-  <h2>Class List</h2>
-  <div *ngFor="let classItem of classes">
-    <h3>{{ classItem.name }}</h3>
-    <app-teacher-student-details [classId]="classItem.id"></app-teacher-student-details>
+  <h3>Class List</h3>
+  <div class="class-list">
+    <div class="class-item" *ngFor="let classItem of classes" (click)="onClassClick(classItem.id)">
+      <span>{{ classItem.name }}</span>
+    </div>
   </div>
 </div>

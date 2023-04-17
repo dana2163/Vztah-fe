@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TeacherClassMockService } from '../teacher-class-mock.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-class-list',
@@ -9,7 +10,7 @@ import { TeacherClassMockService } from '../teacher-class-mock.service';
 export class TeacherClassListComponent implements OnInit {
   classes: any[] = [];
 
-  constructor(private teacherClassMockService: TeacherClassMockService) { }
+  constructor(private teacherClassMockService: TeacherClassMockService, private router: Router) { }
 
   ngOnInit(): void {
     this.getClasses();
@@ -25,4 +26,9 @@ export class TeacherClassListComponent implements OnInit {
       }
     );
   }
+
+  onClassClick(classId: number): void {
+    this.router.navigate(['/teacher/class', classId]);
+  }
+
 }
