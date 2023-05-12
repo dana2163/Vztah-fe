@@ -24,6 +24,9 @@ export class TeacherClassListComponent implements OnInit {
     this.teacherService.getCoursesById(this.teacherId).subscribe(
       data => {
         this.classes = data;
+
+
+
       },
       error => {
         console.error('Error fetching classes:', error);
