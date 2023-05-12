@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TeacherClassMockService } from '../teacher-class-mock.service';
 import { Router } from '@angular/router';
+import {TeacherService} from "../service/teacher.service";
+import {CourseDto} from "../model/teacher.model";
 
 @Component({
   selector: 'app-teacher-class-list',
@@ -8,16 +10,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./teacher-class-list.component.scss']
 })
 export class TeacherClassListComponent implements OnInit {
-  classes: any[] = [];
+  classes: CourseDto[] = [];
 
-  constructor(private teacherClassMockService: TeacherClassMockService, private router: Router) { }
+  teacherId = 3;      //TODO
+
+  constructor(private teacherService: TeacherService, private router: Router) { }
 
   ngOnInit(): void {
     this.getClasses();
   }
 
   getClasses(): void {
-    this.teacherClassMockService.getClasses().subscribe(
+    this.teacherService.getCoursesById(this.teacherId).subscribe(
       data => {
         this.classes = data;
       },
