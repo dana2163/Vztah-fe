@@ -8,6 +8,7 @@ import { ParentsChildrenClassesComponent } from './parents/parents-children-clas
 import {CommonModule} from "@angular/common";
 import {TeacherClassListComponent} from "./teacher/teacher-class-list/teacher-class-list.component";
 import { ClassViewComponent } from './class-view/class-view.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations:[
@@ -22,7 +23,8 @@ import { ClassViewComponent } from './class-view/class-view.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
