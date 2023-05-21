@@ -9,6 +9,7 @@ import {CommonModule} from "@angular/common";
 import {TeacherClassListComponent} from "./teacher/teacher-class-list/teacher-class-list.component";
 import { ClassViewComponent } from './class-view/class-view.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 @NgModule({
   declarations:[
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     ParentsChildrenClassesComponent,
     TeacherClassListComponent,
-    ClassViewComponent
+    ClassViewComponent,
+    TemplateFormComponent
 
   ],
   imports: [

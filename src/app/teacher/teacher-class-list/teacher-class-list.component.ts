@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TeacherClassMockService } from '../teacher-class-mock.service';
 import { Router } from '@angular/router';
 import {TeacherService} from "../service/teacher.service";
 import {CourseDto} from "../model/teacher.model";
@@ -19,6 +18,14 @@ export class TeacherClassListComponent implements OnInit {
   ngOnInit(): void {
     this.getClasses();
   }
+  //
+  // submitClasses() {
+  //   this.teacherService.addTemplate(this.name)
+  //     .subscribe(response => {
+  //       console.log('Шаблон добавлен в базу данных');
+  //       this.getClasses(); // После добавления шаблона, получаем обновленный список классов
+  //     });
+  // }
 
   getClasses(): void {
     this.teacherService.getCoursesById(this.teacherId).subscribe(
@@ -37,5 +44,4 @@ export class TeacherClassListComponent implements OnInit {
   onClassClick(classId: number): void {
     this.router.navigate(['/teacher/class', classId]);
   }
-
 }

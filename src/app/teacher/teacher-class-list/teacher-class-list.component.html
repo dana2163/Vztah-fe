@@ -1,8 +1,18 @@
 <div class="teacher-class-list">
   <h3>Class List</h3>
+  <button class="button"> + </button>
   <div class="class-list">
     <div class="class-item" *ngFor="let classItem of classes" (click)="onClassClick(classItem.id)">
       <span>{{ classItem.name }}</span>
     </div>
   </div>
+
+<!--  <div *ngIf="let classItem of classes">-->
+<!--    <h2>Заполните шаблон</h2>-->
+<!--    <form>-->
+<!--      <label for="name">Название:</label>-->
+<!--      <input type="text" id="name" [(ngModel)]="name">-->
+<!--      <button (click)="submitClasses()">Отправить</button>-->
+<!--    </form>-->
+<!--  </div>-->
 </div>
